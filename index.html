@@ -1,11 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="icon" href="favicon.png">
     <title>CarGame</title>
-    <meta name="viewport" content="user-scalable=0">
-    
-    
+    <meta name="viewport" content="width=960 user-scalable=0">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Avoid crashing into other cars as long as possible.">
+
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
     <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
     <script src="script.js"></script>
@@ -16,9 +20,25 @@
     <script src="player.js"></script>
     <script src="car.js"></script>
     <script src="road.js"></script>
+    <script>
+        window.onload = function () {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(function () {
+                    console.log("Service Worker Registered");
+                });
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <noscript>
+    
+        You need to <a href="https://www.enable-javascript.com/">enable javascript</a> for this game!
+    
+    </noscript>
 </body>
 
 </html>
