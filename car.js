@@ -28,7 +28,7 @@ function Car(type, lane){
             break;
         case "taxi":
             this.boxX = 22.5;
-            this.boxZ = 80;
+            this.boxZ = 55;
             this.scale = 1;
             break;
         case "truck":
@@ -55,5 +55,6 @@ function Car(type, lane){
     this.speed = 10 + Math.random()*0.5;
     this.move = function (){
         this.z += this.speed;
+        this.speed += movingacceleration;
     }
 }
