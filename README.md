@@ -1,24 +1,34 @@
 # Concept CarGame
-Highway Traffic
 
-Game:
-Auto fährt auf der Straße, duch tippen links und rechts auf dem Bildschirm fährt das Auto nach links und rechts. (Gedrückt halten möglich).
+## Names
+* Highway Traffic
+* Speed
 
-Ende:
-* Kollision mit Objekt
-* Abkommen von der Fahrbahn
+## Game
+Car driving on a highway with five lanes, you have to come trough the cars.
 
-Schwierigkeit:
-* Erhöhung der Geschwindigkeit,
-* Tag-Nacht-Rhythmus
+## Controls
+* tapping left or right (only lanes)
+* swiping left or right (only lanes)
+* tapping and holding left or right
+* accelerometer
 
-Hindernisse:
-* Baustellen
-* Barrikaden,
-* lose Reifen
-* Fahrzeuge, langsamer als Spieler
+## End
+* collision with obstacles
+* to much to the left or right
 
-Power-Ups:
+## Make it harder
+* higher speed
+* more cars
+* day-night-cycle
+
+## Obstacles
+* construction sites
+* barricades,
+* lose tires
+* vehicles, less speed than player
+
+## Power-ups:
 * Selfdriving-car (driving autonomous)
 * Helicopter-car (short jump)
 * Plane-Car (long jump)
@@ -26,16 +36,6 @@ Power-Ups:
 * Police / Ambulance etc. (cars move away) (passive)
 * Shield (play on after death)
 
-
-Install Lite: PWA (keine Autos kaufen / kein HS ranked)
+## Versions
+Install Lite: PWA (no ranked highscore, no buying of car (cheats))
 Install Full: TWA? Google Play Store
-
-# ToDo
-
-* Name
-* Aufbau
-* Steuerung
-* Design
-* Hindernisse
-* Power-Ups
-* Intregration GooglePlayServices?

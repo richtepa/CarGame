@@ -12,7 +12,7 @@ function keyPressed(){
 
 function mouseClicked(){
     if(paused){
-        location.reload();
+        newGame();
     } else {
         if(mouseX < windowWidth/2){
             left();

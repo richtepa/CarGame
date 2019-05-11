@@ -28,7 +28,7 @@ function Car(type, lane){
             break;
         case "taxi":
             this.boxX = 22.5;
-            this.boxZ = 80;
+            this.boxZ = 55;
             this.scale = 1;
             break;
         case "truck":

@@ -17,23 +17,10 @@ function preload(){
     textures.truck = loadImage("3Dmodel/truck/truck.png");
     models.van = loadModel("3Dmodel/van/van.obj");
     textures.van = loadImage("3Dmodel/van/van.png");
-    
-    //first road
-    roads.push(new Road(1000));
-    roads.push(new Road(500));
-    roads.push(new Road(0));
-    roads.push(new Road(-500));
-    roads.push(new Road(-1000));
-    roads.push(new Road(-1500));
-    roads.push(new Road(-2000));
-    roads.push(new Road(-2500));
-    roads.push(new Road(-3000));
-    roads.push(new Road(-3500));
-    
-    player = new Player();
 }
 
 function setup(){
     createCanvas(windowWidth, windowHeight, WEBGL);
     angleMode(DEGREES);
+    newGame();
 }

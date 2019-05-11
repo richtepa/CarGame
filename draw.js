@@ -1,5 +1,9 @@
 function draw(){
     if(!paused){
+        
+        score ++;
+        movingspeed += movingacceleration;
+        
         //spawning
         if(frameCount % 30 == 0 && Math.random() < possibility){
             r = Math.random();
@@ -64,7 +68,7 @@ function draw(){
         //player
         push();
         translate(player.x, player.y, -player.z);
-        scale(scales.ambulance);
+        scale(5);
         texture(textures.ambulance);
         model(models.ambulance);
         pop();
