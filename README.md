@@ -19,13 +19,12 @@ Hindernisse:
 * Fahrzeuge, langsamer als Spieler
 
 Power-Ups:
-* Selfdriving-car (automatische Passage)
-* Helicopter-car (kurzer Sprung)
-* Plane-Car (langer Sprung)
-* Delorean (zap durch Autos)
-* Polizei / Rettungswagen o. ä. (Fahrzeuge versuchen auszuweichen)
-
-Shield (weiter Spielen für HS)
+* Selfdriving-car (driving autonomous)
+* Helicopter-car (short jump)
+* Plane-Car (long jump)
+* Delorean (zap through cars)
+* Police / Ambulance etc. (cars move away) (passive)
+* Shield (play on after death)
 
 
 Install Lite: PWA (keine Autos kaufen / kein HS ranked)
