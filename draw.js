@@ -1,9 +1,5 @@
 function draw(){
     if(!paused){
-        
-        score ++;
-        movingspeed += movingacceleration;
-        
         //spawning
         if(frameCount % 30 == 0 && Math.random() < possibility){
             r = Math.random();
@@ -41,8 +37,27 @@ function draw(){
         
         //basic canvas
         background(0, 102, 0);
-        rotateX(rotation);
         
+        //score
+        if(frameCount % 10 == 0){
+            score ++;
+            if(score > highscore){
+                highscore = score;
+            }
+        }
+        movingspeed += movingacceleration;
+        
+        push();
+        fill(128);
+        textFont(f, 100);
+        textSize(50);
+        textAlign(RIGHT);
+        text(score + "(" + highscore + ")", 450, -900);
+        pop();
+        
+        
+        
+        rotateX(rotation);
         
         //surrounding
         for(i=0; i<roads.length; i++){

@@ -55,5 +55,6 @@ function Car(type, lane){
     this.speed = 10 + Math.random()*0.5;
     this.move = function (){
         this.z += this.speed;
+        this.speed += movingacceleration;
     }
 }

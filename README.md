@@ -37,5 +37,5 @@ Car driving on a highway with five lanes, you have to come trough the cars.
 * Shield (play on after death)
 
 ## Versions
-Install Lite: PWA (no ranked highscore, no buying of car (cheats))
-Install Full: TWA? Google Play Store
+* Install Lite: PWA (no ranked highscore, no buying of car (cheats))
+* Install Full: TWA? Google Play Store

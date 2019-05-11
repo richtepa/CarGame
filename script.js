@@ -15,4 +15,5 @@ let possibility;
 let movingspeed;
 let score;
 let carCount;
+let highscore;
 

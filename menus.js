@@ -1,4 +1,7 @@
 function gameOver(){
+    if(localStorage["highscore"] < score){
+        localStorage["highscore"] = score;
+    }
     console.log("GameOver!");
     paused = true;
 }
@@ -11,6 +14,15 @@ function newGame(){
     movingspeed = 20;
     score = 0;
     carCount = 0;
+    
+    
+    if(localStorage["highscore"] == undefined){
+        localStorage["highscore"] = 0;
+    }
+    highscore = localStorage["highscore"];
+    
+    
+    
     player = new Player();
     
     //first road
