@@ -2,3 +2,118 @@ body{
     margin: 0px;
     font-size: 32px;
 }
+
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+
+.screen{
+    position: absolute;
+    left: 0px;
+    width: 100vw;
+    top: 0px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.score{
+    position: absolute;
+    top: 10vh;
+    left: 0px;
+    width: 100vw;
+    text-align: center;
+    font-size: 5vh;
+    color: white;
+}
+
+.menuTitle{
+    position: absolute;
+    top: 25vh;
+    left: 0px;
+    width: 100vw;
+    text-align: center;
+    font-size: 10vh;
+    color: white;
+}
+
+.action{
+    position: absolute;
+    left: 20vw;
+    width: 60vw;
+    height: 10vh;
+    border-radius: 5vh;
+    background-color: white;
+    line-height: 10vh;
+    align-content: center;
+    text-align: center;
+    font-size: 5vh;
+    color: black;
+    cursor: pointer;
+}
+
+.action.disabled{
+    opacity: 0.5;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+#a0{
+    top: 50vh;
+}
+#a1{
+    top: 65vh;
+}
+
+#a2{
+    top: 80vh;
+}
+
+#play{
+    position: absolute;
+    top: 0px;
+    height: 120px;
+    left: 0px;
+    width: 110px;
+}
+
+#playTriangle.icon{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 0 30px 50px;
+    border-color: transparent transparent transparent white;
+}
+
+#playTriangle.hint{
+    float: right;
+    margin-top: 2.5vh;
+    margin-right: 2.5vh;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2.5vh 0 2.5vh 5vh;
+    border-color: transparent transparent transparent black;
+}
+
+.controlSurface{
+    position: absolute;
+    left: 0px;
+    top: 120px;‚
+    z-index: 100;
+    width: 30vw;
+    height: calc(100vh - 120px);
+}
+
+#left.controlSurface{
+    left:0vw;
+}
+#center.controlSurface{
+    left:35vw;
+}
+#right.controlSurface{
+    left:70vw;
+}
