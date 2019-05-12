@@ -1,66 +1,70 @@
-function gameOver(){
-    if(player.invulnerability <= 0){
-        paused = true;
-        if(localStorage["highscore"] < score){
+function gameOver() {
+    if (player.invulnerability <= 0) {
+        main.noLoop();
+        document.getElementById("newHighscore").classList.add("hidden");
+        if (localStorage["highscore"] < score) {
             localStorage["highscore"] = score;
+            document.getElementById("newHighscore").classList.remove("hidden");
         }
         gameOverScreen();
     }
-    
+
 }
 
 
-function pause(){
-    paused = true;
-    if(localStorage["highscore"] < score){
+function pause() {
+    main.noLoop();
+    if (localStorage["highscore"] < score) {
         localStorage["highscore"] = score;
     }
     pauseScreen();
 }
 
-function restart(){
+function restart() {
     hideScreens();
     document.getElementById("controlSurface").classList.remove("hidden");
     newGame();
+    main.loop();
 }
 
-function resume(){
-    if(!document.getElementById("gameOverScreen").classList.contains("hidden")){
+function resume() {
+    if (!document.getElementById("gameOverScreen").classList.contains("hidden")) {
         player.x = 0;
-        player.invulnerability = 2.5; 
+        player.invulnerability = 2.5;
     }
     hideScreens();
     document.getElementById("controlSurface").classList.remove("hidden");
-    paused = false;
+    main.loop();
 }
 
-function menu(){
+function menu() {
     menuScreen();
 }
 
-function settings(){
+function settings() {
     //TODO
 }
 
-function changeCar(){
+function changeCar() {
     //TODO
 }
 
 
 
-function newGame(){
+function newGame() {
+    main.noLoop();
     cars = new Array();
-    paused = false;
-    possibility = 0.5;
+    possibility = 0.75;
+    spawnRate = 100;
     movingspeed = 20;
     score = 0;
     carCount = 0;
-    if(localStorage["highscore"] == undefined){
+    if (localStorage["highscore"] == undefined) {
         localStorage["highscore"] = 0;
     }
     highscore = localStorage["highscore"];
     player = new Player();
-    
+
     //first road
     roads = new Array();
     roads.push(new Road(1000));
@@ -76,31 +80,31 @@ function newGame(){
 }
 
 
-function preloadScreen(){
+function preloadScreen() {
     //TODO
 }
 
-function pauseScreen(){
+function pauseScreen() {
     hideScreens();
     document.getElementById("pScore").innerHTML = score + " (" + highscore + ")";
     document.getElementById("pauseScreen").classList.remove("hidden");
-    clear();
+    main.clear();
 }
 
-function gameOverScreen(){
+function gameOverScreen() {
     hideScreens();
     document.getElementById("goScore").innerHTML = score + " (" + highscore + ")";
     document.getElementById("gameOverScreen").classList.remove("hidden");
-    clear();
+    main.clear();
 }
 
-function menuScreen(){
+function menuScreen() {
     hideScreens();
     document.getElementById("menuScreen").classList.remove("hidden");
-    clear();
+    main.clear();
 }
 
-function hideScreens(){
+function hideScreens() {
     document.getElementById("controlSurface").classList.add("hidden");
     document.getElementById("pauseScreen").classList.add("hidden");
     document.getElementById("gameOverScreen").classList.add("hidden");

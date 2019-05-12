@@ -1,40 +1,27 @@
-function keyPressed(){
-    if(key == ' '){
-        if(paused){
-            resume();
-        } else {
-            pause();
-        }
-    }
-    if(keyCode == LEFT_ARROW){
+document.addEventListener("keydown", function (e) {
+    if (e.keyCode == "37") {
         left();
     }
-    if(keyCode == RIGHT_ARROW){
+    if (e.keyCode == "39") {
         right();
     }
-}
-
-function mouseClicked(){
-    if(
-        mouseX < 110 &&
-        mouseY < 120
-    ){
-        if(paused){
+    if (e.keyCode == "32") {
+        if (!document.getElementById("pauseScreen").classList.contains("hidden")) {
             resume();
         } else {
             pause();
         }
     }
+});
+
+function left() {
+    player.aim -= 100;
 }
 
-function left(){
-    player.x -= 100;
+function right() {
+    player.aim += 100;
 }
 
-function right(){
-    player.x += 100;
-}
+function specialAction() {
 
-function specialAction(){
-    
 }

@@ -7,13 +7,16 @@ let scales = new Object();
 
 let rotation = 135;
 let movingfactor = 10;
-let movingacceleration = 0.01;
+let movingacceleration = 0.0025;
 
 
-let paused = true;
 let possibility;
 let movingspeed;
 let score;
 let carCount;
 let highscore;
+let spawnRate;
 
+function cheat() {
+    player.invulnerability = 3600;
+}
