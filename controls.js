@@ -1,6 +1,10 @@
 function keyPressed(){
     if(key == ' '){
-        paused = !paused;
+        if(paused){
+            resume();
+        } else {
+            pause();
+        }
     }
     if(keyCode == LEFT_ARROW){
         left();
@@ -11,28 +15,26 @@ function keyPressed(){
 }
 
 function mouseClicked(){
-    if(paused){
-        newGame();
-    } else {
-        if(mouseX < windowWidth/2){
-            left();
-        }
-        if(mouseX > windowWidth/2){
-            right();
+    if(
+        mouseX < 110 &&
+        mouseY < 120
+    ){
+        if(paused){
+            resume();
+        } else {
+            pause();
         }
     }
 }
 
 function left(){
     player.x -= 100;
-    if(player.x < -200){
-        gameOver();
-    }
 }
 
 function right(){
     player.x += 100;
-    if(player.x > 200){
-        gameOver();
-    }
+}
+
+function specialAction(){
+    
 }

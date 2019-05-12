@@ -10,7 +10,7 @@ let movingfactor = 10;
 let movingacceleration = 0.01;
 
 
-let paused;
+let paused = true;
 let possibility;
 let movingspeed;
 let score;
