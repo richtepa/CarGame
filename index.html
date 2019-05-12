@@ -30,13 +30,14 @@
         </div>
         <div id="a1" class="action" onclick="restart()">restart</div>
         <div id="a2" class="action" onclick="menu()">
-            
+
             menu
         </div>
     </div>
 
     <div id="gameOverScreen" class="screen hidden">
         <div id="goScore" class="score"></div>
+        <div id="newHighscore" class="hidden">new highscore</div>
         <div id="menuTitle" class="menuTitle">game over</div>
         <div id="a0" class="action" onclick="resume()">
             <div id="playTriangle" class="hint"></div>
@@ -44,20 +45,24 @@
         </div>
         <div id="a1" class="action" onclick="restart()">restart</div>
         <div id="a2" class="action" onclick="menu()">
-            
+
             menu
         </div>
     </div>
 
     <div id="menuScreen" class="screen">
+        <div id="carModel"></div>
         <div class="menuTitle">menu</div>
         <div id="a0" class="action" onclick="restart()">
-            <div id="playTriangle" class="hint"></div>    
+            <div id="playTriangle" class="hint"></div>
             play
         </div>
         <div id="a1" class="action disabled" onclick="changeCar()">change car</div>
         <div id="a2" class="action disabled" onclick="settings()">settings</div>
     </div>
+
+
+    <div id="game"></div>
 
 
 
@@ -68,13 +73,13 @@
     <script language="javascript" type="text/javascript" src="/p5.min.js"></script>
     <script language="javascript" src="/p5.dom.min.js"></script>
     <script src="/script.js"></script>
-    <script src="/preload.js"></script>
-    <script src="/draw.js"></script>
+    <script src="/carModel.js"></script>
     <script src="/controls.js"></script>
     <script src="/menus.js"></script>
     <script src="/player.js"></script>
     <script src="/car.js"></script>
     <script src="/road.js"></script>
+    <script src="/main.js"></script>
 
     <script>
         window.onload = function() {
