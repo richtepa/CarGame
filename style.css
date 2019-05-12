@@ -1,14 +1,20 @@
-body{
-    margin: 0px;
-    font-size: 32px;
+@font-face {
+    font-family: SourceCodePro;
+    src: url(/SourceCodePro-Bold.otf);
 }
 
-.hidden{
+body {
+    margin: 0px;
+    font-size: 32px;
+    font-family: SourceCodePro;
+}
+
+.hidden {
     visibility: hidden;
     display: none;
 }
 
-.screen{
+.screen {
     position: absolute;
     left: 0px;
     width: 100vw;
@@ -18,7 +24,7 @@ body{
     color: white;
 }
 
-.score{
+.score {
     position: absolute;
     top: 7.5vh;
     left: 0px;
@@ -28,7 +34,7 @@ body{
     color: white;
 }
 
-#newHighscore{
+#newHighscore {
     position: absolute;
     top: 15vh;
     left: 0px;
@@ -38,17 +44,17 @@ body{
     text-align: center;
 }
 
-.menuTitle{
+.menuTitle {
     position: absolute;
     top: 25vh;
     left: 0px;
     width: 100vw;
     text-align: center;
-    font-size: 10vh;
+    font-size: 8vh;
     color: white;
 }
 
-.action{
+.action {
     position: absolute;
     left: 20vw;
     width: 60vw;
@@ -58,29 +64,30 @@ body{
     line-height: 10vh;
     align-content: center;
     text-align: center;
-    font-size: 5vh;
+    font-size: 4vh;
     color: black;
     cursor: pointer;
 }
 
-.action.disabled{
+.action.disabled {
     opacity: 0.5;
     text-decoration: line-through;
     cursor: not-allowed;
 }
 
-#a0{
+#a0 {
     top: 50vh;
 }
-#a1{
+
+#a1 {
     top: 65vh;
 }
 
-#a2{
+#a2 {
     top: 80vh;
 }
 
-#play{
+#play {
     position: absolute;
     top: 0px;
     height: 120px;
@@ -88,7 +95,7 @@ body{
     width: 110px;
 }
 
-#playTriangle.icon{
+#playTriangle.icon {
     margin-top: 30px;
     margin-left: 30px;
     width: 0;
@@ -98,7 +105,7 @@ body{
     border-color: transparent transparent transparent white;
 }
 
-#playTriangle.hint{
+#playTriangle.hint {
     float: right;
     margin-top: 2.5vh;
     margin-right: 2.5vh;
@@ -109,21 +116,23 @@ body{
     border-color: transparent transparent transparent black;
 }
 
-.controlSurface{
+.controlSurface {
     position: absolute;
     left: 0px;
-    top: 120px;‚
-    z-index: 100;
+    top: 120px;
+    ‚ z-index: 100;
     width: 30vw;
     height: calc(100vh - 120px);
 }
 
-#left.controlSurface{
-    left:0vw;
+#left.controlSurface {
+    left: 0vw;
 }
-#center.controlSurface{
-    left:35vw;
+
+#center.controlSurface {
+    left: 35vw;
 }
-#right.controlSurface{
-    left:70vw;
+
+#right.controlSurface {
+    left: 70vw;
 }
