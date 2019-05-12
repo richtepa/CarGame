@@ -3,42 +3,91 @@
 
 <head>
     <link rel="stylesheet" href="/style.css" type="text/css">
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="/favicon.png">
     <title>CarGame</title>
     <meta name="viewport" content="width=960 user-scalable=0">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="Avoid crashing into other cars as long as possible.">
-
-    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
-    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
-    <script src="script.js"></script>
-    <script src="preload.js"></script>
-    <script src="draw.js"></script>
-    <script src="controls.js"></script>
-    <script src="menus.js"></script>
-    <script src="player.js"></script>
-    <script src="car.js"></script>
-    <script src="road.js"></script>
-    <script>
-        window.onload = function () {
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker
-                    .register('/sw.js')
-                    .then(function () {
-                    console.log("Service Worker Registered");
-                });
-            }
-        }
-    </script>
 </head>
 
 <body>
+    <div id="controlSurface" class="hidden">
+        <div id="left" class="controlSurface" onclick="left()"></div>
+        <div id="center" class="controlSurface" onclick="specialAction()"></div>
+        <div id="right" class="controlSurface" onclick="right()"></div>
+    </div>
+
+    <div id="pauseScreen" class="screen hidden">
+        <div id="pScore" class="score"></div>
+        <div id="play">
+            <div id="playTriangle" class="icon"></div>
+        </div>
+        <div id="menuTitle" class="menuTitle">pause</div>
+        <div id="a0" class="action" onclick="resume()">
+            <div id="playTriangle" class="hint"></div>
+            resume
+        </div>
+        <div id="a1" class="action" onclick="restart()">restart</div>
+        <div id="a2" class="action" onclick="menu()">
+            
+            menu
+        </div>
+    </div>
+
+    <div id="gameOverScreen" class="screen hidden">
+        <div id="goScore" class="score"></div>
+        <div id="menuTitle" class="menuTitle">game over</div>
+        <div id="a0" class="action" onclick="resume()">
+            <div id="playTriangle" class="hint"></div>
+            resume
+        </div>
+        <div id="a1" class="action" onclick="restart()">restart</div>
+        <div id="a2" class="action" onclick="menu()">
+            
+            menu
+        </div>
+    </div>
+
+    <div id="menuScreen" class="screen">
+        <div class="menuTitle">menu</div>
+        <div id="a0" class="action" onclick="restart()">
+            <div id="playTriangle" class="hint"></div>    
+            play
+        </div>
+        <div id="a1" class="action disabled" onclick="changeCar()">change car</div>
+        <div id="a2" class="action disabled" onclick="settings()">settings</div>
+    </div>
+
+
+
     <noscript>
-    
         You need to <a href="https://www.enable-javascript.com/">enable javascript</a> for this game!
-    
     </noscript>
+
+    <script language="javascript" type="text/javascript" src="/p5.min.js"></script>
+    <script language="javascript" src="/p5.dom.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="/preload.js"></script>
+    <script src="/draw.js"></script>
+    <script src="/controls.js"></script>
+    <script src="/menus.js"></script>
+    <script src="/player.js"></script>
+    <script src="/car.js"></script>
+    <script src="/road.js"></script>
+
+    <script>
+        window.onload = function() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(function() {
+                        console.log("Service Worker Registered");
+                    });
+            }
+        }
+
+    </script>
 </body>
 
 </html>

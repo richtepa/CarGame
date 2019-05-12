@@ -36,6 +36,7 @@ function draw(){
         
         
         //basic canvas
+        noStroke();
         background(0, 102, 0);
         
         //score
@@ -48,11 +49,14 @@ function draw(){
         movingspeed += movingacceleration;
         
         push();
-        fill(128);
+        fill(255);
         textFont(f, 100);
-        textSize(50);
+        textSize(windowWidth/20);
         textAlign(RIGHT);
-        text(score + "(" + highscore + ")", 450, -900);
+        text(score + " (" + highscore + ")", windowWidth/2 - 30, -windowHeight/2 + 70);
+        
+        rect(-windowWidth/2 + 30, -windowHeight/2 + 30, 20, 60);
+        rect(-windowWidth/2 + 60, -windowHeight/2 + 30, 20, 60);
         pop();
         
         
@@ -62,7 +66,7 @@ function draw(){
         //surrounding
         for(i=0; i<roads.length; i++){
             road = roads[i];
-            if(road.z > 1500){
+            if(road.z > windowHeight/4*3){
                 roads.splice(i, 1);
                 roads.push(new Road(roads[roads.length-1].z - 500));
                 i--;
@@ -83,16 +87,34 @@ function draw(){
         //player
         push();
         translate(player.x, player.y, -player.z);
+        if(player.invulnerability > 0){
+            player.invulnerability -= 1/60;
+            fill(0, 0, 255, 255*player.invulnerability/2.5);
+            sphere(100);
+        }
         scale(5);
         texture(textures.ambulance);
         model(models.ambulance);
         pop();
+        
+        if(player.x < -300){
+            player.x = -300;
+        }
+        if(player.x < -200){
+            gameOver();
+        }
+        if(player.x > 300){
+            player.x = 300;
+        }
+        if(player.x > 200){
+            gameOver();
+        }
 
         
         //cars
         for(i=0; i<cars.length; i++){
             car = cars[i];
-            if(car.z > 1200){
+            if(car.z > windowHeight/4*3){
                 cars.splice(i, 1);
                 i--;
             } else {
