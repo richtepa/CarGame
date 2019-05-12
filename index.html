@@ -21,15 +21,15 @@
     <div id="pauseScreen" class="screen hidden">
         <div id="pScore" class="score"></div>
         <div id="play">
-            <div id="playTriangle" class="icon"></div>
+            <div class="playTriangle icon"></div>
         </div>
-        <div id="menuTitle" class="menuTitle">pause</div>
-        <div id="a0" class="action" onclick="resume()">
-            <div id="playTriangle" class="hint"></div>
+        <div class="menuTitle">pause</div>
+        <div class="a0 action" onclick="resume()">
+            <div class="playTriangle hint"></div>
             resume
         </div>
-        <div id="a1" class="action" onclick="restart()">restart</div>
-        <div id="a2" class="action" onclick="menu()">
+        <div class="a1 action" onclick="restart()">restart</div>
+        <div class="a2 action" onclick="menu()">
 
             menu
         </div>
@@ -38,13 +38,13 @@
     <div id="gameOverScreen" class="screen hidden">
         <div id="goScore" class="score"></div>
         <div id="newHighscore" class="hidden">new highscore</div>
-        <div id="menuTitle" class="menuTitle">game over</div>
+        <div class="menuTitle">game over</div>
         <div id="a0" class="action" onclick="resume()">
-            <div id="playTriangle" class="hint"></div>
+            <div class="playTriangle hint"></div>
             resume
         </div>
-        <div id="a1" class="action" onclick="restart()">restart</div>
-        <div id="a2" class="action" onclick="menu()">
+        <div class="a1 action" onclick="restart()">restart</div>
+        <div class="a2 action" onclick="menu()">
 
             menu
         </div>
@@ -53,12 +53,12 @@
     <div id="menuScreen" class="screen">
         <div id="carModel"></div>
         <div class="menuTitle">menu</div>
-        <div id="a0" class="action" onclick="restart()">
-            <div id="playTriangle" class="hint"></div>
+        <div class="a0 action" onclick="restart()">
+            <div class="playTriangle hint"></div>
             play
         </div>
-        <div id="a1" class="action disabled" onclick="changeCar()">change car</div>
-        <div id="a2" class="action disabled" onclick="settings()">settings</div>
+        <div class="a1 action disabled" onclick="changeCar()">change car</div>
+        <div class="a2 action disabled" onclick="settings()">settings</div>
     </div>
 
 

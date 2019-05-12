@@ -70,20 +70,20 @@ body {
 }
 
 .action.disabled {
-    opacity: 0.5;
+    opacity: 0.75;
     text-decoration: line-through;
     cursor: not-allowed;
 }
 
-#a0 {
+.a0 {
     top: 50vh;
 }
 
-#a1 {
+.a1 {
     top: 65vh;
 }
 
-#a2 {
+.a2 {
     top: 80vh;
 }
 
@@ -95,7 +95,7 @@ body {
     width: 110px;
 }
 
-#playTriangle.icon {
+.playTriangle.icon {
     margin-top: 30px;
     margin-left: 30px;
     width: 0;
@@ -105,7 +105,7 @@ body {
     border-color: transparent transparent transparent white;
 }
 
-#playTriangle.hint {
+.playTriangle.hint {
     float: right;
     margin-top: 2.5vh;
     margin-right: 2.5vh;
