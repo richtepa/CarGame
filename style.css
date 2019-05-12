@@ -20,12 +20,22 @@ body{
 
 .score{
     position: absolute;
-    top: 10vh;
+    top: 7.5vh;
     left: 0px;
     width: 100vw;
     text-align: center;
     font-size: 5vh;
     color: white;
+}
+
+#newHighscore{
+    position: absolute;
+    top: 15vh;
+    left: 0px;
+    width: 100vw;
+    font-size: 5vh;
+    color: lightcoral;
+    text-align: center;
 }
 
 .menuTitle{

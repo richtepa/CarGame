@@ -1,8 +1,10 @@
 function gameOver(){
     if(player.invulnerability <= 0){
         paused = true;
+        document.getElementById("newHighscore").classList.add("hidden");
         if(localStorage["highscore"] < score){
             localStorage["highscore"] = score;
+            document.getElementById("newHighscore").classList.remove("hidden");
         }
         gameOverScreen();
     }
