@@ -6,8 +6,8 @@ let models = new Object();
 let scales = new Object();
 
 let rotation = 135;
-let movingfactor = 10;
-let movingacceleration = 0.0025;
+let movingfactor = 20;
+let movingacceleration = 0.005;
 
 
 let possibility;

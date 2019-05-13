@@ -96,7 +96,7 @@ function Car(lane) {
     this.y = 0;
     this.z = -3500 + (Math.random() * 100);
 
-    this.speed = 10 + Math.random() * 0.5;
+    this.speed = 20 + Math.random();
     this.move = function () {
         this.z += movingspeed - this.speed;
     }

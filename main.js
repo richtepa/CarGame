@@ -1,6 +1,6 @@
 var mainSketch = function (sketch) {
     sketch.noLoop();
-    
+
     sketch.preload = function () {
         //models and textures
         textures.road = sketch.loadImage("/3Dmodel/road/texture.webp");
@@ -66,10 +66,10 @@ var mainSketch = function (sketch) {
             }
         }
         movingspeed += movingacceleration;
-        if (movingspeed < 2000) {
-            spawnRate = Math.floor(2000 / movingspeed);
+        if (movingspeed < 4000) {
+            spawnRate = Math.floor(4000 / movingspeed);
         } else {
-            spawnRate = 2000;
+            spawnRate = 4000;
         }
 
 
@@ -111,11 +111,11 @@ var mainSketch = function (sketch) {
 
         //player
         sketch.push();
-        if(player.x != player.aim){
-            if(Math.abs(player.x - player.aim) < movingfactor){
+        if (player.x != player.aim) {
+            if (Math.abs(player.x - player.aim) < movingfactor) {
                 player.x = player.aim;
             } else {
-                if(player.x > player.aim){
+                if (player.x > player.aim) {
                     player.x -= movingfactor;
                 } else {
                     player.x += movingfactor;
@@ -194,3 +194,4 @@ var mainSketch = function (sketch) {
 }
 
 var main = new p5(mainSketch, document.getElementById("game"));
+main.frameRate(30);

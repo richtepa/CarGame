@@ -57,8 +57,8 @@ function newGame() {
     main.noLoop();
     cars = new Array();
     possibility = 0.75;
-    spawnRate = 100;
-    movingspeed = 20;
+    spawnRate = 50;
+    movingspeed = 40;
     score = 0;
     carCount = 0;
     if (localStorage["highscore"] == undefined) {
