@@ -22,6 +22,7 @@ function pause() {
 
 function restart() {
     hideScreens();
+    carModel.noLoop();
     document.getElementById("controlSurface").classList.remove("hidden");
     newGame();
     main.loop();
@@ -38,6 +39,7 @@ function resume() {
 }
 
 function menu() {
+    carModel.loop();
     menuScreen();
 }
 
